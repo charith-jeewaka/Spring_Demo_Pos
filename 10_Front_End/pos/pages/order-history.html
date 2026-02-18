@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../css/order-style.css">
+
+</head>
+<body>
+
+<h1>ORDER HISTORY</h1>
+
+
+<nav class="navbar">
+    <!--    <div class="logo">POS System</div>-->
+    <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="customer.html">Customer</a>
+        <a href="item.html">Item</a>
+        <!--        <a class="active" href="place-order.html">Order</a>-->
+    </div>
+</nav>
+
+<!-- Order History -->
+<div class="card">
+    <h2>Order History</h2>
+
+    <table id="order-history">
+        <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Total (LKR)</th>
+        </tr>
+        </thead>
+        <tbody id="order-history-list"></tbody>
+    </table>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../js/order-script.js"></script>
+</body>
+</html>

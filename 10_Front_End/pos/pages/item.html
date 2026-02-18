@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Management</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<h1>ITEM MANAGEMENT</h1>
+
+<div class="nav-bar">
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="customer.html">Customer</a>
+        <a href="place-order.html">Order</a>
+        <a href="order-history.html">Transactions</a>
+
+    </nav>
+</div>
+
+<div class="content">
+
+    <!-- Form Section -->
+    <div class="form">
+        <form id="item-form">
+
+            <div class="form-item">
+                <label for="id">Item ID</label>
+                <input id="id" type="text" placeholder="Enter Item ID" required>
+            </div>
+
+            <div class="form-item">
+                <label for="name">Item Name</label>
+                <input id="name" type="text" placeholder="Enter Item Name" required>
+            </div>
+
+            <div class="form-item">
+                <label for="price">Unit Price</label>
+                <input id="price" type="number" step="0.01" placeholder="Enter Price" required>
+            </div>
+
+            <div class="form-item">
+                <label for="qoh">Quantity On Hand</label>
+                <input id="qoh" type="number" placeholder="Enter Quantity" required>
+            </div>
+
+        </form>
+
+        <div class="button-bar">
+            <button id="btn-save-item">Save</button>
+            <button id="btn-update-item">Update</button>
+            <button id="btn-delete-item">Delete</button>
+            <button id="btn-refresh-item">Clear</button>
+        </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-container">
+        <table>
+            <thead>
+            <tr>
+                <th>Item ID</th>
+                <th>Name</th>
+                <th>Price (LKR)</th>
+                <th>Quantity</th>
+            </tr>
+            </thead>
+            <tbody id="itemTableBody"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="/pos/js/item-script.js"></script>
+
+</body>
+</html>

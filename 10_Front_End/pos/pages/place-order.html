@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="../css/order-style.css">
+</head>
+<body>
+
+<h1>PLACE ORDER</h1>
+
+
+<!-- Navbar -->
+<nav class="navbar">
+<!--    <div class="logo">POS System</div>-->
+    <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="customer.html">Customer</a>
+        <a href="item.html">Item</a>
+        <a href="order-history.html">Transactions</a>
+<!--        <a class="active" href="place-order.html">Order</a>-->
+    </div>
+</nav>
+
+<main class="container">
+
+
+    <!-- Customer Selection -->
+    <div class="card">
+        <h2>Select Customer</h2>
+        <select id="order-customer"></select>
+    </div>
+
+    <!-- Item Section -->
+    <div id="row">
+    <div class="card" id="item-1">
+        <h2>Add Items</h2>
+
+        <table id="order-item-table">
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Sub Total</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody id="order-item-list"></tbody>
+        </table>
+
+        <div class="actions">
+            <button class="btn primary" onclick="addItemRow()">Add Row</button>
+            <button class="btn danger" onclick="clearItems()">Clear</button>
+        </div>
+    </div>
+
+    <div class="card summary" id="item-2">
+        <h2>Order Summary</h2>
+
+        <div class="summary-grid">
+            <div>
+                <label>Order ID</label>
+                <div id="order-id" class="value">-</div>
+            </div>
+
+            <div>
+                <label>Total Amount (LKR)</label>
+                <div id="order-total" class="value">-</div>
+            </div>
+
+            <div>
+                <label>Order Date</label>
+                <input type="date" id="order-date">
+            </div>
+        </div>
+
+        <button class="btn primary place-order" onclick="saveOrder()">Save Order</button>
+    </div>
+    </div>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../js/order-script.js"></script>
+</body>
+</html>

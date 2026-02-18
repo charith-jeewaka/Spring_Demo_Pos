@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<h1>CUSTOMER MANAGEMENT</h1>
+
+<div class="nav-bar">
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="item.html">Item</a>
+        <a href="place-order.html">Order</a>
+        <a href="order-history.html">Transactions</a>
+
+    </nav>
+</div>
+
+<div class="content">
+
+    <!-- Form Section -->
+    <div class="form">
+        <form id="customer-form">
+
+            <div class="form-item">
+                <label for="id">Customer ID</label>
+                <input id="id" type="text" placeholder="Enter ID" required>
+            </div>
+
+            <div class="form-item">
+                <label for="name">Customer Name</label>
+                <input id="name" type="text" placeholder="Enter Name" required>
+            </div>
+
+            <div class="form-item">
+                <label for="address">Customer Address</label>
+                <input id="address" type="text" placeholder="Enter Address" required>
+            </div>
+
+        </form>
+
+        <div class="button-bar">
+            <button id="btn-save">Save</button>
+            <button id="btn-update">Update</button>
+            <button id="btn-delete">Delete</button>
+            <button id="btn-refresh">Clear</button>
+        </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-container">
+        <table id="customerTable">
+            <thead>
+            <tr>
+                <th>Customer ID</th>
+                <th>Name</th>
+                <th>Address</th>
+            </tr>
+            </thead>
+            <tbody id="customerTableBody">
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../js/customer-script.js"></script>
+
+</body>
+</html>

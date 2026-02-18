@@ -1,0 +1,125 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Body */
+body {
+    background: #f4f6f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+i{
+    font-size: 7vw;
+    margin-bottom: 7vh;
+}
+/* Header */
+.header {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+/* Main Container */
+.container {
+    flex: 1;
+    padding: 50px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation Cards */
+.nav-cards {
+    /*display: grid;*/
+    /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Card Style */
+.card {
+    background: #ffffff;
+    padding: 25px 10px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #2c3e50;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    width: 22.5%;
+    height: 40vh;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #777;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    background: #2c3e50;
+    color: white;
+}
+
+.card:hover p {
+    color: #ecf0f1;
+}
+
+/* Accent Line Animation */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: #1abc9c;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
